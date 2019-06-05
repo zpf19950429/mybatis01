@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--命名空间指向对应的接口-->
+<mapper namespace="net.wanho.mapper.StudentMapper">
+
+    <!--
+    id 对应接口中的方法名
+    parameterType 参数类型
+    -->
+    <insert id="addStu" parameterType="Student">
+        INSERT  into student VALUES (NULL,#{name},#{password})
+    </insert>
+    <update id="updateStu" parameterType="Studemt">
+        UPDATE student SET NAME =#{NAME}where id=#{id}
+    </update>
+
+
+</mapper>
